@@ -21,8 +21,108 @@ a:active{
 .mt_150{
 	margin-top: 150px;
 }
+.red{
+	color: #A94442;
+}
 .panel-title{
 	height: 40px;
 	line-height: 40px;
 	font-size: 20px;
+}
+
+.lt_aside{
+	width: 180px;
+	height: 100%;
+	background-color: #222D32;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	transition: all 1s;
+}
+.lt_aside.hidemenu{
+	left:-180px;
+}
+.lt_aside .brand{
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 24px;
+	background-color: #367FA9;
+}
+.lt_aside .brand a{
+	color: #fff;
+}
+.lt_aside .user{
+	height: 180px;
+	padding-top: 30px;
+}
+.lt_aside .user img{
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	display: block;
+	margin:0 auto;
+}
+.lt_aside .user p{
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 10px;
+}
+.lt_aside .nav a{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 40px;
+	display: block;
+	color: #fff;
+	/*先设置一个占位的透明的左边框，否则a被点击的时候加上左边框时a会动一下*/
+	border-left: 3px solid transparent;
+}
+.lt_aside .nav i{
+	margin-right: 5px;
+}
+.lt_aside .nav a.current{
+	background-color: #1D1F21;
+	border-left: 3px solid #006699;
+}
+.lt_aside .nav .child a{
+	padding-left: 60px;
+}
+
+
+.lt_main{
+	padding-left: 180px;
+	padding-top: 50px;
+	transition: all 1s;
+}
+.lt_main.hidemenu{
+	padding-left: 0px;
+}
+.lt_main .lt_topbar{
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	line-height: 50px;
+	top: 0;
+	right: 0;
+	padding-left: 180px;
+	background-color: #3C8DBC;
+	transition: all 1s;
+}
+.lt_topbar.hidemenu{
+	padding-left: 0px;
+}
+.lt_main .lt_topbar a{
+	display: block;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+}
+.breadcrumb{
+	margin-top: 30px;
 }
