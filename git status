@@ -1,0 +1,29 @@
+[33mcommit 4f32df860ad44ff370e65ae47b830834c82b0fb8[m[33m ([m[1;36mHEAD -> [m[1;32mindex[m[33m)[m
+Author: dxw <dxw@aaa.con>
+Date:   Sat Apr 7 19:49:17 2018 +0800
+
+    首页功能完成
+
+[33mcommit eab652ade5b6665020e71637768ad06af678cc99[m
+Author: dxw <dxw@aaa.con>
+Date:   Fri Apr 6 23:43:54 2018 +0800
+
+    首页侧边栏二级分类切换+顶部菜单栏切换+模态框显隐+退出点击事件
+
+[33mcommit cf649cba62379356458f91d0fd9ae6bb1c7a00b6[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: dxw <dxw@aaa.con>
+Date:   Fri Apr 6 21:48:04 2018 +0800
+
+    登录功能完成
+
+[33mcommit a58ec1c89a09a420915f795570b8c9fd7003a7c4[m
+Author: dxw <dxw@aaa.con>
+Date:   Fri Apr 6 19:58:31 2018 +0800
+
+    电商全端环境搭建完成
+
+[33mcommit 42395cc33630ad0e8435cf8f61b62797aa314793[m
+Author: dxw <dxw@aaa.con>
+Date:   Fri Apr 6 10:53:25 2018 +0800
+
+    项目初始化提交
