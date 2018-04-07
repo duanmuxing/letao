@@ -59,7 +59,7 @@ $(function(){
 	if(location.href.indexOf("login.html")===-1){
 		$.ajax({
 			type:'get',
-			url:"/employee/employeeLogout",
+			url:"/employee/checkRootLogin",
 			dataType:'json',
 			success:function(info){
 				if(info.success){
