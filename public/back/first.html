@@ -47,22 +47,26 @@
 		<div class="container-fluid">
 			<ol class="breadcrumb">
 				  <li><a href="index.html">管理系统</a></li>
-				  <li class="active">用户管理</li>
+				  <li class="active">分类管理</li>
+				  <li class="active">一级分类</li>
+
 			</ol>
 
 			<div class="lt_content">
+					<button class="btn btn-default mb_20">添加分类</button>
 					<table class="table table-bordered table-hover">
 						<thead>
 							<tr>
-								<th>序号</th>
-								<th>用户名</th>
-								<th>手机号</th>
-								<th>状态</th>
-								<th>操作</th>
+								<th width="20%">序号</th>
+								<th width="80%">一级分类名称</th>
 							</tr>
 						</thead>
 						<tbody>
 							<!-- 表身 -->
+							<tr>
+								<td>1</td>
+								<td>户外馆</td>
+							</tr>
 						</tbody>
 					</table>
 				<div class="text-right">
@@ -71,7 +75,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- 启用禁用模态框 -->
+	<!-- 添加分类模态框 -->
 	<div class="modal fade" id="userModal">
 	  <div class="modal-dialog modal-sm">
 	    <div class="modal-content">
@@ -109,23 +113,7 @@
 	  </div>
 	</div>
 	
-	<script type="text/html" id="tpl">
-		{{ each rows v i}}
-			<tr>
-				<td>{{ (page-1)*size +(i+1) }}</td>
-				<td>{{ v.username }}</td>
-				<td>{{ v.mobile }}</td>
-				<td>{{ v.isDelete===1?"正常":"启用" }}</td>
-				<td data-id="{{ v.id }}">
-					{{ if(v.isDelete===1) }}
-					<button class="btn btn-danger">禁用</button>
-					{{ else }}
-					<button class="btn btn-success">启用</button>
-					{{ /if }}
-				</td>
-			</tr>
-		{{ /each }}
-	</script>
+
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
@@ -133,6 +121,6 @@
 	<script src="lib/artTemplate/template-web.js"></script>
 	<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 	<script src="js/common.js"></script>
-	<script src="js/user.js"></script>
+	
 </body>
 </html>
