@@ -63,6 +63,7 @@ $(function(){
 			dataType:'json',
 			success:function(info){
 				if(info.success){
+					// console.log(info)
 					// 登录成功
 					console.log("登录成功")
 				}
