@@ -3,7 +3,7 @@ $(function(){
 
 		// 基于准备好的dom，初始化echarts实例，dom对象需要具有宽高！
 	  var echarts_1 = echarts.init(document.querySelector('.echarts_1'));
-
+	  console.log(echarts_1)
 	  var option = {
 	  		// 大标题
             title: {

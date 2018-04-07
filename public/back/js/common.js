@@ -15,7 +15,23 @@ $(function(){
 	});
 });
 
-
+	if(location.href.indexOf("login.html")===-1){
+		$.ajax({
+			type:'get',
+			url:"/employee/checkRootLogin",
+			dataType:'json',
+			success:function(info){
+				if(info.success){
+					// console.log(info)
+					// 登录成功
+					// console.log("登录成功")
+				}
+				if(info.error===400){
+					location.href="login.html";
+				}
+			}
+		});
+	}
 // 侧边栏二级分类切换功能，顶部菜单栏切换显示功能，点击退出按钮模态框显示，退出按钮注册事件
 $(function(){
 	// 侧边栏二级菜单显示和隐藏切换
@@ -55,22 +71,3 @@ $(function(){
 	})
 });
 
-$(function(){
-	if(location.href.indexOf("login.html")===-1){
-		$.ajax({
-			type:'get',
-			url:"/employee/employeeLogout",
-			dataType:'json',
-			success:function(info){
-				if(info.success){
-					// console.log(info)
-					// 登录成功
-					console.log("登录成功")
-				}
-				if(info.error===400){
-					location.href="login.html";
-				}
-			}
-		});
-	}
-});
