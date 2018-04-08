@@ -71,3 +71,22 @@ $(function(){
 	})
 });
 
+$(function(){
+	if(location.href.indexOf("login.html")===-1){
+		$.ajax({
+			type:'get',
+			url:"/employee/checkRootLogin",
+			dataType:'json',
+			success:function(info){
+				if(info.success){
+					// 登录成功
+					console.log("登录成功")
+				}
+				if(info.error===400){
+					location.href="login.html";
+				}
+			}
+		});
+	}
+});
+
