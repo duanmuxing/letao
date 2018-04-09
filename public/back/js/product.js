@@ -146,7 +146,9 @@ $(function(){
 	    	},
 	    	proDesc:{
 	    		validators:{
-	    			message:"请输入商品描述"
+	    			notEmpty:{
+	    				message:"请输入商品描述"
+	    			}
 	    		}
 	    	},
 	    	num:{
