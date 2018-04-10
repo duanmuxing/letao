@@ -8,16 +8,15 @@
 	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
 	<link rel="stylesheet" href="lib/mui/css/mui.css">
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/product.css">
 </head>
 <body>
 	<!-- 容器 -->
 	<div class="lt_container">
 		<!-- 头部 -->
 		<div class="lt_header">
-			<a href="index.html" class="icon_left"><i class="fa fa-home"></i></a>
-			<h3>乐淘云购</h3>
-			<a href="search.html" class="icon_right"><i class="fa fa-search"></i></a>
+			<a href="javascript:history.go(-1);" class="icon_left"><i class="mui-icon mui-icon-back"></i></a>
+			<h3>商品列表</h3>
 		</div>
 		<!-- 主体 -->
 		<div class="lt_main">
@@ -52,85 +51,65 @@
 				        </div>
 					</div>
 					
-					
-
-					<div class="lt_nav">
-						<ul class="mui-clearfix">
-							<li><a href="#"><img src="images/nav1.png" alt=""></a></li>
-							<li><a href="#"><img src="images/nav2.png" alt=""></a></li>
-							<li><a href="#"><img src="images/nav3.png" alt=""></a></li>
-							<li><a href="#"><img src="images/nav4.png" alt=""></a></li>
-							<li><a href="#"><img src="images/nav5.png" alt=""></a></li>
-							<li><a href="#"><img src="images/nav6.png" alt=""></a></li>
-						</ul>
+					<div class="lt_pro_name itemBox">
+						<strong>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</strong>
+					</div>
+					<div class="lt_price itemBox">
+						价格：
+						<span class="price">¥499.1</span>
+						<span class="oldPrice">¥580.1</span>
+					</div>
+					<div class="lt_size itemBox">
+						尺码：
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+						<span>40</span>
+					</div>
+					<div class="lt_num itemBox">
+						数量：
+						<div class="mui-numbox">
+				            <!-- "-"按钮，点击可减小当前数值 -->
+				            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+				            <input class="mui-numbox-input" type="number" />
+				            <!-- "+"按钮，点击可增大当前数值 -->
+				            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+				        </div>
+				        <span>剩余数量：20双</span>
 					</div>
 
-					<div class="lt_product">
-						<a href="#" class="lt_product_item">
-							<img src="images/product.jpg" alt="">
-							<p class="mui-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700</p>
-							<p>
-								<span class="price">¥560</span>
-								<span class="old">¥580</span>
-							</p>
-							<button class="mui-btn mui-btn-primary">立即购买</button>
-						</a>
-						<a href="#" class="lt_product_item">
-							<img src="images/product.jpg" alt="">
-							<p class="mui-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700</p>
-							<p>
-								<span class="price">¥560</span>
-								<span class="old">¥580</span>
-							</p>
-							<button class="mui-btn mui-btn-primary">立即购买</button>
-						</a>
-						<a href="#" class="lt_product_item">
-							<img src="images/product.jpg" alt="">
-							<p class="mui-ellipsis-2">adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700</p>
-							<p>
-								<span class="price">¥560</span>
-								<span class="old">¥580</span>
-							</p>
-							<button class="mui-btn mui-btn-primary">立即购买</button>
-						</a>
+					<div class="lt_desc itemBox">
+						描述：
 					</div>
 				</div>
 			</div>
 
 		</div>
-		<!-- 底部 -->
-		<div class="lt_footer">
-			<ul>
-				<li>
-					<a href="index.html" class="current">
-						<i class="fa fa-home"></i>
-						<p>首页</p>
-					</a>
-				</li>
-				<li>
-					<a href="category.html">
-						<i class="fa fa-bars"></i>
-						<p>分类页</p>
-					</a>
-				</li>
-				<li>
-					<a href="cart.html">
-						<i class="fa fa-shopping-cart"></i>
-						<p>购物车</p>
-					</a>
-				</li>
-				<li>
-					<a href="user.html">
-						<i class="fa fa-user"></i>
-						<p>会员中心</p>
-					</a>
-				</li>
-			</ul>
+		
+		<!-- 底部购物车 -->
+		<div class="lt_go_cart">
+			<a href="" class="go_cart mui-pull-left">去购物车</a>
+			<div class="btns mui-pull-right">
+				<button class="mui-btn mui-btn-danger">加入购物车</button>
+				<button class="mui-btn mui-btn-warning">立即购买</button>
+			</div>
 		</div>
 	</div>
-
+	
+	
+	
 	<script src="lib/mui/js/mui.min.js"></script>
 	<script src="lib/zepto/zepto.min.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/product.js"></script>
 </body>
 </html>
