@@ -13,24 +13,46 @@ $(function(){
 });
 
 // 封装截取地址栏拼接的字符串函数
+// function getSearch(key){
+// 	// 获取地址栏问号后面的字符串
+// 	var search=location.search;
+// 	// 解码(中文在获取时是编码状态，解码成中文)
+// 	search=decodeURI(search);
+// 	// 删除字符串最前面的问号
+// 	search=search.slice(1);
+// 	// 以&分割字符串成数组
+// 	var arr=search.split("&");
+// 	// 定义一个空对象，用来保存分割字符串出来的键和值
+// 	var obj={};
+// 	// 遍历数组，将数组中的键和值以对象的形式保存起来
+// 	arr.forEach(function(element,index){
+// 		// 以=再分割数组
+// 		var k=element.split("=")[0];
+// 		var v=element.split("=")[1];
+// 		obj[k]=v;
+// 	})
+// 	// 返回对象的属性值
+// 	return obj[key]
+// }
+// 封装获取地址栏拼接的字符串函数
 function getSearch(key){
-	// 获取地址栏问号后面的字符串
+	// 获取地址栏后拼接的字符串
 	var search=location.search;
-	// 解码(中文在获取时是编码状态，解码成中文)
+	// 解码
 	search=decodeURI(search);
-	// 删除字符串最前面的问号
+	// 去掉问号
 	search=search.slice(1);
 	// 以&分割字符串成数组
 	var arr=search.split("&");
-	// 定义一个空对象，用来保存分割字符串出来的键和值
+	// 定义一个空对象，用来将数组以对象的形式保存
 	var obj={};
-	// 遍历数组，将数组中的键和值以对象的形式保存起来
 	arr.forEach(function(element,index){
-		// 以=再分割数组
+		// 将分割出来的数组再次分割成键值对
 		var k=element.split("=")[0];
 		var v=element.split("=")[1];
+		// 将分割出来的键值对保存在对象中
 		obj[k]=v;
 	})
 	// 返回对象的属性值
-	return obj[key]
+	return obj[key];
 }

@@ -107,6 +107,86 @@ $(function(){
 		// 页面要跳转，清空输入框
 		$(".lt_search input").val("");
 		// 跳转的时候地址后面拼接上输入框的value值，跳转的页面请求服务器渲染数据时使用
-		location.href="searchList.html?key"+key;
+		location.href="searchList.html?key="+key;
 	});
 });
+
+// $(function(){
+// 	// 进行本地存储操作操作，获取本地存储的内容
+// 	// 约定以search_list为键名
+// 	render();
+// 	function getHistory(){
+// 		var history=localStorage.getItem("search_list")||"[]";
+// 		var arr=JSON.parse(history);
+// 		return arr;
+// 	}
+// 	// 功能1：渲染搜索历史记录
+// 	// 1、读取本地历史记录里的数组
+// 	// 2、结合模版进行渲染
+// 	// 一进入页面就先进行渲染操作
+// 	// 封装方法，专门用于读取本地存储中的历史记录的数组
+// 	// 封装渲染函数，专门用于页面渲染
+// 	function render(){
+// 		var arr=getHistory();
+// 		$(".lt_history").html(template("searchTp1",{arr:arr}))
+// 	};
+// 	// 删除功能：删除本地存储数组里的一项
+// 	// 1、给所有的删除按钮添加事件委托
+// 	// 2、获取索引
+// 	// 3、读取本地存储的数组，删除对应索引的项
+// 	// 4、同步到本地存储
+// 	// 5、重新渲染也页面
+// 	$(".lt_history").on("click",".btn-delete",function(){
+// 		var that=this;
+// 		mui.confirm("你确定要删除么？","温馨提示",["确认","取消"],function(e){
+// 			if(e.index===0){
+// 				var index=$(that).data("index");
+// 				var arr=getHistory();
+// 				arr.splice(index,1);
+// 				localStorage.setItem("search_list",JSON.stringify(arr));
+// 				render();
+// 			}
+// 		});
+		
+// 	});
+// 	// 清空功能
+// 	// 1、注册事件，事件委托
+// 	// 2、清除本地存储的search_list
+// 	// 3、页面重新渲染
+// 	$(".lt_history").on("click",".btn-empty",function(){
+// 		// alert(1)
+// 		mui.confirm("你确定要清空历史记录吗？","温馨提示",["确认","取消"],function(e){
+// 			if(e.index===0){
+// 				localStorage.removeItem("search_list");
+// 				render();
+// 			}
+// 		});
+// 	})
+// 	// 添加功能
+// 	// 1、点击搜索框按钮，获取输入框里的值
+// 	// 2、获取本地存储的数组
+// 	// 3、将输入框的值添加到数组的最前面
+// 	// 4、数据持久化到本地存储中，修改search_list
+// 	// 5、重新渲染页面
+
+// 	// 注册搜索点击事件
+// 	$(".lt_search button").click(function(){
+// 		var key=$(".lt_search input").val().trim();
+// 		if(key==""){
+// 			mui.toast("请输入搜索关键字");
+// 			return;
+// 		}
+// 		var arr=getHistory();
+// 		if(arr.indexOf(key)!==-1){
+// 			arr.splice(arr.indexOf(key),1);
+// 		}
+// 		if(arr.length>=10){
+// 			arr.pop();
+// 		}
+// 		arr.unshift(key);
+// 		localStorage.setItem("search_list",JSON.stringify(arr))
+// 		render()
+// 		$(".lt_search input").val("");
+// 		location.href="searchList.html?key="+key;
+// 	});
+// });
