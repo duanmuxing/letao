@@ -20,6 +20,9 @@
 	background-color: #F5F5F5;
 	font-size: 14px;
 }
+.lt_size span.current{
+	background-color: blue;
+}
 .lt_num span{
 	font-size: 12px;
 	color: #666;
